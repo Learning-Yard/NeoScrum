@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Feedback } from '../feedback';
 import { Login } from '../login'
 
 @Component({
@@ -8,7 +9,7 @@ import { Login } from '../login'
 })
 export class LoginComponent implements OnInit {
   // isLoggedIn:boolean = false;
-  
+
   userModel = new Login ("","");
   constructor() { }
  
