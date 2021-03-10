@@ -1,0 +1,35 @@
+<form class="signup-form example-small-box" style="align-items: center;" #signupForm="ngForm" (ngSubmit)="(signupForm.value)">
+  <div class="input-group">
+  <input type="name" #name="ngModel" name="e_name" required pattern="[a-zA-Z\s]+" minlength="3" class="form-control" id="InputName1" aria-describedby="basic-addon1" placeholder="Employee Name" [(ngModel)]="userModel.e_name"
+  [class.is-invalid]="name.invalid && name.touched"><br>
+  </div>
+  <div *ngIf="name.errors && (name.dirty || name.touched)">
+    <span style="color: red;"[hidden]="!name.errors.required">
+      Name is required 
+    </span>
+    <span style="color: red;" [hidden]="!name.errors.pattern">
+      Only alphabets allowed
+    </span>
+    <span style="color: red;" [hidden]="!name.errors.minlength">
+      Please Enter Atleast 3 Characters
+    </span>
+    </div>
+  <!-- <span style="color: red; text-align: left;"[class.is-invalid]="name.invalid">Only Alphabets allowed</span> -->
+  <!-- <span style="color: red; text-align: left;"[class.d-none]="name.untouched">Enter Name</span>  -->
+  <div class="input-group">
+    <input type="email" #email="ngModel" name="e_email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" id="InputEmail1" aria-describedby="basic-addon1" placeholder="Email address" [(ngModel)]="userModel.e_email"
+    [class.is-invalid]="email.invalid && email.touched">
+    </div>
+    <div *ngIf="email.errors && (email.dirty || email.touched)">
+      <span style="color: red;"[hidden]="!email.errors.required">
+        Email is required 
+      </span>
+      <span style="color: red;" [hidden]="!email.errors.pattern">
+        Invalid Email Address
+      </span>
+      </div>
+    <div>
+      <input type="file" class="col-sm-4 md-4" id="customFile" />
+      </div><br>
+    <button type="submit" class="btn btn-primary submit-button" [disabled]=!(signupForm.valid)>Sign Up</button>
+</form>

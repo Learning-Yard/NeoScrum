@@ -1,0 +1,25 @@
+.neo{
+    color: white;
+    font-weight: 700;
+}
+.scrum{
+    color: red;
+    font-weight: 700;
+}
+// .bg { 
+//     top: 0; 
+//     left: 0; 
+      
+//     /* Preserve aspect ratio */
+//     min-width: 100%;
+//     min-height: 100%;
+//     background-size :cover;
+//   }
+
+@media only screen 
+and (min-device-width : 1024px) 
+and (max-device-width : 1600px) { 
+.home-page-nav{
+    margin-left: 80%;
+}
+}
