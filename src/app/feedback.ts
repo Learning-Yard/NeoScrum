@@ -4,7 +4,7 @@ export class Feedback {
         public e_email:string,
         public e_feedback:string
     ){
-        const desc:string = this.e_feedback;
+        // const desc:string = this.e_feedback;
     }
     
 }

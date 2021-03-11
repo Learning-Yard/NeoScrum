@@ -1,0 +1,15 @@
+.neo{
+    color: white;
+    font-weight: 700;
+}
+.scrum{
+    color: red;
+    font-weight: 700;
+}
+@media only screen 
+and (min-device-width : 1024px) 
+and (max-device-width : 1600px) { 
+.home-page-nav{
+    margin-left: 80%;
+}
+}

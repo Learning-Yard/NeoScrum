@@ -31,7 +31,7 @@
         <textarea #feedback="ngModel" name="e_feedback" required class="custom-textarea" id="InputFeedback1" class="form-control" aria-describedby="basic-addon1" placeholder="Feedback" [(ngModel)]="userModel.e_feedback" [class.is-invalid]="feedback.touched"></textarea>
 
         <div class="count-div">
-            <div *ngIf="desc.length" class="count-text" >{{desc.length}}</div>
+            <!-- <div *ngIf="desc.length" class="count-text" >{{desc.length}}</div> -->
         </div><br>
         <button type="submit" class="btn btn-primary submit-button" [disabled]=!(feedbackForm.valid)>Submit</button>
         </form>
