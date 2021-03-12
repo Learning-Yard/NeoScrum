@@ -1,11 +1,4 @@
-<!-- <div *ngIf="isLoggedIn; then thenBlock; else elseBlock"></div>
-    <ng-template #thenBlock>
-        <p>login works!</p>
-    </ng-template>
-    <ng-template #elseBlock>
-    <img className="welcome-image" width="1284px" height="768px" src="../../assets/images/scrum.jpg">
-    </ng-template> -->
-
+<body>
 <form class="signup-form example-small-box" style="align-items: center;" #signinForm="ngForm" (ngSubmit)="(signinForm.value)">
   <span class="neo">Neo</span><span class="scrum">Scrum</span>
     <div class="input-group">
@@ -39,3 +32,4 @@
     <button type="submit" class="btn btn-primary submit-button" routerLink="/dashboard" [disabled]=!(signinForm.valid)>Sign In</button><br><br>
     Not Registrered Yet ? <button type="button" class="btn btn-warning" style="text-align: right;" routerLink="/sign-up">Sign Up</button>
 </form>
+</body>

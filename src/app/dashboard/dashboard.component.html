@@ -1,3 +1,4 @@
+<body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#"><span class="neo">Neo</span><span class="scrum">Scrum</span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,15 +11,30 @@
       </div>
     </div>
   </nav><br>
-
-<div class="container">
+<!-- <div class="container mb-2">
     <div class="card-deck">
-        <div class="card col-sm-4 col-lg-4 mb-4" *ngFor="let dummy of dummyList">
+        <div class="card col-mb-auto col-md-auto col-auto mx-auto" *ngFor="let dummy of dummyList">
             <div class="card-body">
-                <h4 class="card-title">{{dummy.name}}</h4>
+                <h4 class="card-title">Feedback</h4>
                 <p class="card-text">{{dummy.feedback}}</p>
-            <p class="card-text"><small class="text-muted">{{dummy.updated}} minutes ago</small></p>
+            <p class="card-text"><small class="text-muted">-by {{dummy.name}} {{dummy.updated}} minutes ago</small></p>
             </div>
         </div>
     </div>
-</div>
+</div> -->
+
+<div class="container">
+  <div class="row">
+      <div class="col-sm-6 col-lg-4" style="margin-top: 1%; margin-bottom: 1%;" *ngFor="let dummy of dummyList">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Feedback</h5>
+            <p class="card-text">{{dummy.feedback}}</p>
+            <p class="card-text"><small class="text-muted">-by {{dummy.name}} {{dummy.updated}} minutes ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>

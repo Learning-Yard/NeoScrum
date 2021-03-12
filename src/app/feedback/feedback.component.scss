@@ -1,37 +1,99 @@
-input{
-    padding: 3%;
-    margin: 4%;
-  }
-  .example-small-box {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 6% 16%;
-    padding: 16px;
-    border-radius: 8px;
-    height: auto;
-    width: auto;
-    background-color:aliceblue;
-  }
-  .custom-textarea {
-    outline: none;
-    resize: none;
-    border-right:0;
+// input{
+//     padding: 3%;
+//     margin: 4%;
+//   }
+//   .example-small-box {
+//     align-items: center;
+//     justify-content: center;
+//     text-align: center;
+//     margin: 6% 16%;
+//     padding: 16px;
+//     border-radius: 8px;
+//     height: auto;
+//     width: auto;
+//     background-color:aliceblue;
+//   }
+//   .custom-textarea {
+//     outline: none;
+//     resize: none;
+//     border-right:0;
+// }
+
+// .count-div {
+//   height: 34px; 
+//   width: 20px;
+//   border: 1px solid rgb(169, 169, 169); 
+//   color: grey; 
+//   font-size: 14px; 
+//   border-left:0;
+// }
+
+// .count-text {
+//   margin-top:15px;
+// }
+
+// .display-flex {
+//   display: flex
+// }
+
+body{
+height: 500px;
+background-color: darksalmon;
+}
+// .container {
+// max-width: 820px;
+// margin: 0px auto;
+// margin-top: 50px;
+// }
+.comment {
+float: left;
+width: 100%;
+height: auto;
+}
+// .commenter {
+// float: left;
+// }
+// .commenter img {
+// width: 35px;
+// height: 35px;
+// }
+.comment-text-area {
+float: left;
+width: 100%;
+height: auto;
 }
 
-.count-div {
-  height: 34px; 
-  width: 20px;
-  border: 1px solid rgb(169, 169, 169); 
-  color: grey; 
-  font-size: 14px; 
-  border-left:0;
+.textinput {
+float: left;
+width: 100%;
+min-height: 75px;
+outline: none;
+resize: none;
+border: 1px solid grey;
+box-shadow: black;
+box-shadow: 0 2px 12px rgba(3, 4, 3, 0.433)
 }
 
-.count-text {
-  margin-top:15px;
+.neo{
+  color: white;
+  font-weight: 700;
 }
-
-.display-flex {
-  display: flex
+.scrum{
+  color: red;
+  font-weight: 700;
+}
+.text-below-textarea{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+body{
+  background: linear-gradient(to bottom, #e0eafc 0%, #cfdef3 61%);
+  height: 100vh;
+}
+@media only screen 
+and (min-device-width : 1024px) 
+and (max-device-width : 1600px) { 
+.home-page-nav{
+    margin-left: 80%;
+}
 }

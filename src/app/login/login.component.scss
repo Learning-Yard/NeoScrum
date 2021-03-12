@@ -14,7 +14,7 @@ input{
     border-radius: 8px;
     height: auto;
     width: auto;
-    background-color:aliceblue;
+    background: linear-gradient(to bottom, #00c3ff 0%, #f3f9a7 61%);
   }
   body, html {
     height: 100%;
@@ -32,13 +32,12 @@ input{
     background-size: cover;
   }
   .neo{
-    color: black;
+    color: whitesmoke;
     font-weight: 900;
     font-size:xx-large;
 }
 .scrum{
-    color: red;
+    color: rgb(255, 92, 92);
     font-weight: 900;
     font-size: xx-large;
 }
-  
