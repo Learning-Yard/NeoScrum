@@ -10,7 +10,7 @@ import { Login } from '../login'
 export class LoginComponent implements OnInit {
   // isLoggedIn:boolean = false;
 
-  userModel = new Login ("","");
+  userModel = new Login ("","","");
   constructor() { }
  
   ngOnInit(): void {

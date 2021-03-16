@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import dummy from '../../assets/data/dummy.json';
+import { Login } from '../login'
 
 @Component({
   selector: 'app-dashboard',
@@ -9,7 +10,7 @@ import dummy from '../../assets/data/dummy.json';
 export class DashboardComponent implements OnInit {
 public dummyList:{name:string,feedback:string,updated:number}[]=dummy;
   constructor() { }
-
+  userModel = new Login ("","","");
   ngOnInit(): void {
   }
 

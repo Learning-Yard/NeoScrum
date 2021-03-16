@@ -26,15 +26,25 @@
               <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
               <!-- <textarea id="w3review" name="w3review" style="display: flexbox;"></textarea> -->
               
-                      <textarea  maxlength="100" class="textinput" placeholder="  Write your feedback here..."></textarea>         
-                      <div class="container text-below-textarea">
-                        <span class="card-text text-left" style="display:inline-block;text-align:left;">
-                            <small class="text-muted">Max 100 Characters</small>
-                        </span>
-                        <span class="card-text text-right" style="display:inline-block;text-align:right;">
-                            <small class="text-muted">0/100</small>
-                        </span>
-                       </div>     
+              <textarea class="textinput" 
+              placeholder="  Write your feedback here..."
+              #inputVal  
+              (keyup)="getVal(inputVal.value)" 
+              maxlength="100"></textarea>   
+    <div class="container text-below-textarea">
+          <span class="card-text text-left" style="display:inline-block;text-align:left;">
+              <small class="text-muted">Max 100 Characters</small>
+          </span>
+      
+            <span class="card-text text-right" style="display:inline-block;text-align:right;">
+              <div *ngIf="currentVal.length < 80; else loggedOut">
+                <small class="text-muted">{{currentVal.length}} /100</small>
+              </div>
+              <ng-template #loggedOut>
+                <small class=" " style="color: red;"> {{currentVal.length}} /100 </small>
+            </ng-template>
+            </span>               
+     </div>    
             
               <a href="#" class="btn btn-primary">Submit Feedback</a>
               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
@@ -52,15 +62,25 @@
             <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
             <!-- <textarea id="w3review" name="w3review" style="display: flexbox;"></textarea> -->
                         
-            <textarea class="textinput" placeholder="  Write your feedback here..."></textarea>         
-            <div class="container text-below-textarea">
-              <span class="card-text text-left" style="display:inline-block;text-align:left;">
-                  <small class="text-muted">Max 100 Characters</small>
-              </span>
-              <span class="card-text text-right" style="display:inline-block;text-align:right;">
-                  <small class="text-muted">0/100</small>
-              </span>
-             </div> 
+            <textarea class="textinput" 
+            placeholder="  Write your feedback here..."
+            #inputVal  
+            (keyup)="getVal(inputVal.value)" 
+            maxlength="100"></textarea>   
+  <div class="container text-below-textarea">
+        <span class="card-text text-left" style="display:inline-block;text-align:left;">
+            <small class="text-muted">Max 100 Characters</small>
+        </span>
+    
+          <span class="card-text text-right" style="display:inline-block;text-align:right;">
+            <div *ngIf="currentVal.length < 80; else loggedOut">
+              <small class="text-muted">{{currentVal.length}} /100</small>
+            </div>
+            <ng-template #loggedOut>
+              <small class=" " style="color: red;"> {{currentVal.length}} /100 </small>
+          </ng-template>
+          </span>               
+   </div>
 
             <a href="#" class="btn btn-primary">Submit Feedback</a>
             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
@@ -78,15 +98,25 @@
           <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
           <!-- <textarea id="w3review" name="w3review" style="display: flexbox;"></textarea> -->
           
-          <textarea class="textinput" placeholder="  Write your feedback here..."></textarea>         
-          <div class="container text-below-textarea">
-            <span class="card-text text-left" style="display:inline-block;text-align:left;">
-                <small class="text-muted">Max 100 Characters</small>
-            </span>
-            <span class="card-text text-right" style="display:inline-block;text-align:right;">
-                <small class="text-muted">0/100</small>
-            </span>
-           </div> 
+          <textarea class="textinput" 
+                          placeholder="  Write your feedback here..."
+                          #inputVal  
+                          (keyup)="getVal(inputVal.value)" 
+                          maxlength="100"></textarea>   
+                <div class="container text-below-textarea">
+                      <span class="card-text text-left" style="display:inline-block;text-align:left;">
+                          <small class="text-muted">Max 100 Characters</small>
+                      </span>
+                  
+                        <span class="card-text text-right" style="display:inline-block;text-align:right;">
+                          <div *ngIf="currentVal.length < 80; else loggedOut">
+                            <small class="text-muted">{{currentVal.length}} /100</small>
+                          </div>
+                          <ng-template #loggedOut>
+                            <small class=" " style="color: red;"> {{currentVal.length}} /100 </small>
+                        </ng-template>
+                        </span>               
+                 </div> 
                   
           <a href="#" class="btn btn-primary">Submit Feedback</a>
           <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>

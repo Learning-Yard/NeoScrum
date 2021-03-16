@@ -11,7 +11,11 @@ export class FeedbackComponent implements OnInit {
   userModel = new Feedback ("","","");
   
   constructor() { }
+  currentVal=""
 
+  getVal(value:any){
+    this.currentVal = value
+  }
   ngOnInit(): void {
   }
 
