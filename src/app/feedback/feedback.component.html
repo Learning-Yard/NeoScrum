@@ -1,4 +1,3 @@
-<body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#"><span class="neo">Neo</span><span class="scrum">Scrum</span></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,116 +11,40 @@
   </div>
 </nav><br>
 
-<div class="container">
-  <div class="card-deck">
-    <div class="card mb-4 text-center" style="background: linear-gradient(to bottom, #00c3ff 0%, #f3f9a7 61%);">
-          <div style="justify-content: center;align-items: center;">
-              <img src="../../assets/images/batman.png" 
-              alt="Avatar"  
-              style="width:40%; border-radius: 50%;margin-top: 10%; margin-bottom: 10%;  
-              box-shadow: 0 4px 17px rgba(3, 4, 3, 0.433);">           
-          </div>
-            <div class="card-body">
-              <h4 class="card-title">Suneesh</h4>
-              <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
-              <!-- <textarea id="w3review" name="w3review" style="display: flexbox;"></textarea> -->
-              
-              <textarea class="textinput" 
-              placeholder="  Write your feedback here..."
-              #inputVal  
-              (keyup)="getVal(inputVal.value)" 
-              maxlength="100"></textarea>   
-    <div class="container text-below-textarea">
-          <span class="card-text text-left" style="display:inline-block;text-align:left;">
-              <small class="text-muted">Max 100 Characters</small>
-          </span>
-      
-            <span class="card-text text-right" style="display:inline-block;text-align:right;">
-              <div *ngIf="currentVal.length < 80; else loggedOut">
-                <small class="text-muted">{{currentVal.length}} /100</small>
-              </div>
-              <ng-template #loggedOut>
-                <small class=" " style="color: red;"> {{currentVal.length}} /100 </small>
-            </ng-template>
-            </span>               
-     </div>    
-            
-              <a href="#" class="btn btn-primary">Submit Feedback</a>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-      </div>
-      <div class="card mb-4 text-center" style="background: linear-gradient(to bottom, #00c3ff 0%, #f3f9a7 61%);">
-        <div style="justify-content: center;align-items: center;">
-            <img src="../../assets/images/batman.png" 
-            alt="Avatar"  
-            style="width:40%; border-radius: 50%;margin-top: 10%; margin-bottom: 10%;  
-            box-shadow: 0 4px 17px rgba(3, 4, 3, 0.433);">           
-        </div>
-          <div class="card-body">
-            <h4 class="card-title">Sumit</h4>
-            <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
-            <!-- <textarea id="w3review" name="w3review" style="display: flexbox;"></textarea> -->
-                        
-            <textarea class="textinput" 
-            placeholder="  Write your feedback here..."
-            #inputVal  
-            (keyup)="getVal(inputVal.value)" 
-            maxlength="100"></textarea>   
-  <div class="container text-below-textarea">
-        <span class="card-text text-left" style="display:inline-block;text-align:left;">
-            <small class="text-muted">Max 100 Characters</small>
-        </span>
-    
-          <span class="card-text text-right" style="display:inline-block;text-align:right;">
-            <div *ngIf="currentVal.length < 80; else loggedOut">
-              <small class="text-muted">{{currentVal.length}} /100</small>
+<div class="container"  >
+  <div class="row">
+      <div class="col-sm-6 col-lg-4 card-margin" *ngFor="let feedback of feedBackList">
+          <div class="card border-primary card-bg" >
+            <div class="text-center">
+                <img class="imgClass" src="../../assets/images/batman.png"  >           
             </div>
-            <ng-template #loggedOut>
-              <small class=" " style="color: red;"> {{currentVal.length}} /100 </small>
-          </ng-template>
-          </span>               
-   </div>
-
-            <a href="#" class="btn btn-primary">Submit Feedback</a>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        </div>
+            <div class="card-body">
+              <h5 class="card-title text-center">{{feedback.name}}</h5>
+              <textarea class="textinput" 
+                        placeholder="  Write your feedback here..."
+                        #inputVal  
+                        (keyup)="getVal(inputVal.value)" 
+                        maxlength="100"></textarea>   
+              <div class="container text-below-textarea">
+                    <span class="card-text text-left" style="display:inline-block;text-align:left;">
+                        <small class="text-muted">Max 100 Characters</small>
+                    </span>
+                
+                      <span class="card-text text-right" style="display:inline-block;text-align:right;">
+                        <div *ngIf="inputVal.value.length < 80; else loggedOut">
+                          <small class="text-muted">{{inputVal.value.length}} /100</small>
+                        </div>
+                        <ng-template #loggedOut>
+                          <small class=" " style="color: red;"> {{inputVal.value.length}} /100 </small>
+                      </ng-template>
+                      </span>               
+               </div>       
+    
+            <div class="text-center">
+              <button href="#" class="btn btn-primary submit"  >Submit Feedback</button>
+            </div>
+            </div>
+          </div>
+        </div>    
     </div>
-    <div class="card mb-4 text-center" style="background: linear-gradient(to bottom, #00c3ff 0%, #f3f9a7 61%);">
-      <div style="justify-content: center;align-items: center;">
-          <img src="../../assets/images/batman.png" 
-          alt="Avatar"  
-          style="width:40%; border-radius: 50%;margin-top: 10%; margin-bottom: 10%;  
-          box-shadow: 0 4px 17px rgba(3, 4, 3, 0.433);">           
-      </div>
-        <div class="card-body">
-          <h4 class="card-title">Sujit</h4>
-          <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
-          <!-- <textarea id="w3review" name="w3review" style="display: flexbox;"></textarea> -->
-          
-          <textarea class="textinput" 
-                          placeholder="  Write your feedback here..."
-                          #inputVal  
-                          (keyup)="getVal(inputVal.value)" 
-                          maxlength="100"></textarea>   
-                <div class="container text-below-textarea">
-                      <span class="card-text text-left" style="display:inline-block;text-align:left;">
-                          <small class="text-muted">Max 100 Characters</small>
-                      </span>
-                  
-                        <span class="card-text text-right" style="display:inline-block;text-align:right;">
-                          <div *ngIf="currentVal.length < 80; else loggedOut">
-                            <small class="text-muted">{{currentVal.length}} /100</small>
-                          </div>
-                          <ng-template #loggedOut>
-                            <small class=" " style="color: red;"> {{currentVal.length}} /100 </small>
-                        </ng-template>
-                        </span>               
-                 </div> 
-                  
-          <a href="#" class="btn btn-primary">Submit Feedback</a>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
   </div>         
-      </div>
-      </div>
- </body>             

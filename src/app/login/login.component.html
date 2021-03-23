@@ -44,7 +44,8 @@
           </span>
           </div>
       <br>
-    <button type="submit" class="btn btn-primary submit-button" routerLink="/dashboard" [disabled]=!(signinForm.valid)>Sign In</button><br><br>
+    <!-- <button type="submit" class="btn btn-primary submit-button" routerLink="/dashboard/{{id}}" [disabled]=!(signinForm.valid) (onclick)="idchanger(name.value)">Sign In</button><br><br> -->
+    <button type="submit" class="btn btn-primary submit-button" routerLink="/dashboard/{{id}}" [disabled]=!(signinForm.valid) >Sign In</button><br><br>
     Not Registrered Yet ? <button type="button" class="btn btn-warning" style="text-align: right;" routerLink="/sign-up">Sign Up</button>
 </form>
 </body>

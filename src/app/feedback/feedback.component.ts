@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Feedback } from '../feedback'
+import { Feedback } from '../feedback';
+import feedBackDummy from '../../assets/data/dummy.json';
 
 @Component({
   selector: 'app-feedback',
@@ -9,7 +10,7 @@ import { Feedback } from '../feedback'
 export class FeedbackComponent implements OnInit {
 
   userModel = new Feedback ("","","");
-  
+  public feedBackList:{name:string,feedback:string,updated:number}[]=feedBackDummy;
   constructor() { }
   currentVal=""
 

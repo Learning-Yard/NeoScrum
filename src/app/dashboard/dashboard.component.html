@@ -26,16 +26,21 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-sm-6 col-lg-4" style="margin-top: 1%; margin-bottom: 1%;" *ngFor="let dummy of dummyList">
+      <!-- <div class="col-sm-6 col-lg-4" style="margin-top: 1%; margin-bottom: 1%;" *ngFor="let dummy of dummyList"> -->
+        <div class="col-sm-6 col-lg-4" style="margin-top: 1%; margin-bottom: 1%;" *ngFor="let htlist of feedbacks1">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Feedback</h5>
-            <p class="card-text">{{dummy.feedback}}</p>
-            <p class="card-text"><small class="text-muted">-by {{dummy.name}} {{dummy.updated}} minutes ago</small></p>
+            <!-- <h5 class="card-title">Feedback</h5> -->
+            <h5 class="card-title">{{htlist.userId}}</h5>
+            <!-- <p class="card-text">{{dummy.feedback}}</p> -->
+            <p class="card-text">{{htlist.body}}</p>
+            <!-- <p class="card-text"><small class="text-muted">-by {{dummy.name}} {{dummy.updated}} minutes ago</small></p> -->
           </div>
         </div>
       </div>
     </div>
   </div>
-  
+  <!-- <div class="dummydisplayhttp" *ngFor="let htlist of feedbacks">
+    <li>{{htlist.userId}}</li><span>{{htlist.body}}</span>
+  </div> -->
 </body>
