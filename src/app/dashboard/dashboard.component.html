@@ -1,13 +1,17 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#"><span class="neo">Neo</span><span class="scrum">Scrum</span></a>
+    <a class="navbar-brand" href="#"><span class="neo">Neo</span><span class="scrum">Scrum</span></a> 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav home-page-nav">
+        <div class="navbar-brand">
+          <img class="profilePic" src="../../assets/images/batman.png" >                       
+        <span class="" href="#"> {{id.id}}</span>
+      </div>
         <a class="nav-link active login" routerLink="/feedback">Feedback<span class="sr-only">(current)</span></a>
-        <a class="nav-link signup" routerLink="/login">LogOut</a>
+        <a class="nav-link signup" routerLink="/login" (click)="logout()">LogOut</a>
         <a class="nav-link profile">{{userModel.e_name}}</a>
       </div>
     </div>
@@ -27,9 +31,9 @@
 <div class="container">
   <div class="row">
       <!-- <div class="col-sm-6 col-lg-4" style="margin-top: 1%; margin-bottom: 1%;" *ngFor="let dummy of dummyList"> -->
-        <div class="col-sm-6 col-lg-4" style="margin-top: 1%; margin-bottom: 1%;" *ngFor="let htlist of feedbacks1">
+        <div class="col-sm-6 col-lg-4 animate__animated animate__fadeIn animate__slower" style="margin-top: 1%; margin-bottom: 1%;" *ngFor="let htlist of feedbacks1">
         <div class="card">
-          <div class="card-body">
+          <div class="card-body border-primary card-bg">
             <!-- <h5 class="card-title">Feedback</h5> -->
             <h5 class="card-title">{{htlist.userId}}</h5>
             <!-- <p class="card-text">{{dummy.feedback}}</p> -->

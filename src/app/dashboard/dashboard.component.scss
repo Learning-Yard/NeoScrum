@@ -7,17 +7,25 @@
     font-weight: 700;
 }
 .card-title{
-    background-color: rgba($color:lightblue, $alpha: 6.0);
+    background: linear-gradient(to right, #f3f9a7 46%, #ffffff 71%);
     border-radius: 10px;
+    text-align: center;
 }
-body{
-    background: linear-gradient(to bottom, #e0eafc 0%, #cfdef3 61%);
-    height: 100vh;
+
+.card-bg{
+    background: linear-gradient(to bottom, #33ccff 0%, #ffffff 61%);   
+    box-shadow: 0 4px 17px rgba(3, 4, 3, 0.433);
+  }
+.profilePic{
+    width:17%; 
+    border-radius: 50%;
+    margin: 1%;
+    border: 2px solid;
 }
 @media only screen 
 and (min-device-width : 1024px) 
 and (max-device-width : 1600px) { 
 .home-page-nav{
-    margin-left: 80%;
+    margin-left: 67%;
 }
 }

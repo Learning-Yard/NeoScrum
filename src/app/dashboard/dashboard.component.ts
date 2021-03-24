@@ -31,7 +31,11 @@ id:any; // To be replaced with UID
     })
     this.id=this.router.snapshot.params['id']
   }
-
+  logout(){
+    localStorage.removeItem('name');
+    localStorage.removeItem('email');
+    localStorage.removeItem('password');
+  }
 }
 
 // function key(key: any, any: any): number {

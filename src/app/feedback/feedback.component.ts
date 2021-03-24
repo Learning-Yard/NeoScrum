@@ -19,5 +19,9 @@ export class FeedbackComponent implements OnInit {
   }
   ngOnInit(): void {
   }
-
+  logout(){
+    localStorage.removeItem('name');
+    localStorage.removeItem('email');
+    localStorage.removeItem('password');
+  }
 }

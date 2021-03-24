@@ -5,15 +5,19 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav home-page-nav">
+      <div class="navbar-brand">
+        <img class="profilePic" src="../../assets/images/batman.png" >                       
+      <span class="" href="#"> id</span>
+    </div>
       <a class="nav-link active login" routerLink="/dashboard">Home<span class="sr-only">(current)</span></a>
-      <a class="nav-link signup" routerLink="/login">LogOut</a>
+      <a class="nav-link signup" routerLink="/login" (click)="logout()">LogOut</a>
     </div>
   </div>
 </nav><br>
 
 <div class="container"  >
   <div class="row">
-      <div class="col-sm-6 col-lg-4 card-margin" *ngFor="let feedback of feedBackList">
+      <div class="col-sm-6 col-lg-4 card-margin animate__animated animate__fadeIn animate__slower" *ngFor="let feedback of feedBackList">
           <div class="card border-primary card-bg" >
             <div class="text-center">
                 <img class="imgClass" src="../../assets/images/batman.png"  >           
